@@ -13,13 +13,30 @@ import "hardhat-tracer";
 
 const config: HardhatUserConfig = {
   solidity: {
-    version: "0.8.7",
-    settings: {
-      optimizer: {
-        enabled: true,
-        runs: 5000,
+
+    compilers: [
+      {
+        version: "0.8.7",
+        settings: {
+            optimizer: {
+              enabled: true,
+              runs: 5000,
+          },
+        },
+          
       },
-    },
+      {
+        version: "0.8.13",
+        settings: {
+            optimizer: {
+              enabled: true,
+              runs: 5000,
+          },
+        },
+      },
+    ],
+    // version: "0.8.7",
+  
   },
   namedAccounts: {
     deployer: 0,

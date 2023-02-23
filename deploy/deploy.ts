@@ -17,11 +17,42 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const standardTokenFactory = await deploy("StandardTokenFactory", {
     from: deployer,
     log: true,
-  });
+  } );
+  
+
+  //latest changes from mayur
+
+  const feeToSetter = "0x0b75f8cea7e4D59738A924eA929a8a7E35D63450";
+
+  const landingPoolFactory = await deploy( "LendingPoolFactory", {
+    args: [
+      feeToSetter
+    ],
+    from: deployer,
+    log: true,
+  } );
+
+  const stackingPoolFactory = await deploy( "StakingPoolFactory", {
+    args: [
+      feeToSetter
+    ],
+    from: deployer,
+    log: true,
+  } );
+
+  const mSwapPoolFactory = await deploy( "MSwapFactory", {
+    args: [
+      feeToSetter
+    ],
+    from: deployer,
+    log: true,
+  } );
+  
   const liquidityTokenFactory = await deploy("LiquidityTokenFactory", {
     from: deployer,
     log: true,
-  });
+  } );
+  
   await deploy("CreateManage", {
     args: [
       deployer,
@@ -31,16 +62,19 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     ],
     from: deployer,
     log: true,
-  });
+  } );
+  
   const lpLocker = await deploy("LPLocker", {
     args: [deployer, utils.parseEther("0.01")],
     from: deployer,
     log: true,
-  });
+  } );
+  
   const presaleFactory = await deploy("PresaleFactory", {
     from: deployer,
     log: true,
-  });
+  } );
+  
   await deploy("PresaleManage", {
     args: [
       deployer,
@@ -52,13 +86,15 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     ],
     from: deployer,
     log: true,
-  });
+  } );
+  
   await deploy("TokenLocker", {
     args: [deployer, utils.parseEther("0.01")],
     from: deployer,
     log: true,
   });
 };
+
 export default func;
 func.tags = [
   "StandardTokenFactory",
