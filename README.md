@@ -1,6 +1,6 @@
 # contract-list
 
-### Mantle Launch Core
+### Mantle Launch Core Contracts
 
 - Token Factory CREATEMANAGE: [0xa25E5394Bc021C91F49ebb5AC7dA8faED25a78eD](https://explorer.testnet.mantle.xyz/address/0xa25E5394Bc021C91F49ebb5AC7dA8faED25a78eD)
 - Token Lock: [0x2839A137EA0B4c29DF7E77Fc5Bed40637eb397f0](https://explorer.testnet.mantle.xyz/address/0x2839A137EA0B4c29DF7E77Fc5Bed40637eb397f0)
