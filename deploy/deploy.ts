@@ -22,7 +22,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
 
   //latest changes from mayur
 
-  const feeToSetter = "0x0b75f8cea7e4D59738A924eA929a8a7E35D63450";
+  const feeToSetter = "0x20613aBe93e4611Cf547b4395E4248c6129c8697";
 
   const landingPoolFactory = await deploy( "LendingPoolFactory", {
     args: [

@@ -11,7 +11,9 @@
     "deploy:mantleTestnet": "hardhat deploy --network mantleTestnet",
     "verify:mantleTestnet": "hardhat --network mantleTestnet sourcify",
     "deploy:goerli": "hardhat deploy --network goerli",
-    "verify:goerli": "hardhat --network goerli etherscan-verify"
+    "verify:goerli": "hardhat --network goerli etherscan-verify",
+    "deploy:scrollSepolia": "hardhat deploy --network goerli",
+    "verify:scrollSepolia": "hardhat --network goerli etherscan-verify"
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.3.2"

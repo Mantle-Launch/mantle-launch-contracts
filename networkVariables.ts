@@ -17,6 +17,7 @@ const chainIds = {
   MaticMainnet: 137,
   ropsten: 3,
   mantleTestnet: 5001,
+  scrollSepolia:534351
 };
 
 export const MantleTestnet: ChainAddresses = {
@@ -31,10 +32,17 @@ export const GoerliTestnet: ChainAddresses = {
   wethAddress: "0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6",
 };
 
+export const ScrollSepoliaTestnet: ChainAddresses = {
+  oolongRouterAddress: "0x17AFD0263D6909Ba1F9a8EAC697f76532365Fb95",
+  oolongFactoryAddress: "0xB856587fe1cbA8600F75F1b1176E44250B11C788",
+  wethAddress: "0x5300000000000000000000000000000000000004",
+};
+
 export const chainIdToAddresses: {
   [id: number]: { [contractName: string]: string };
 } = {
   [chainIds.mantleTestnet]: MantleTestnet,
   [chainIds.hardhat]: MantleTestnet,
   [chainIds.goerli]: GoerliTestnet,
+  [chainIds.scrollSepolia]: ScrollSepoliaTestnet,
 };

@@ -62,8 +62,12 @@ const config: HardhatUserConfig = {
       url: "https://rpc.testnet.mantle.xyz",
       accounts: [process.env.DEPLOYER_PRIVATE_KEY!],
     },
-    goerli: {
-      url: process.env.GOERLI_RPC_URL!,
+    // goerli: {
+    //   url: process.env.GOERLI_RPC_URL!,
+    //   accounts: [process.env.DEPLOYER_PRIVATE_KEY!],
+    // },
+    scrollSepolia: {
+      url: "https://sepolia-rpc.scroll.io"!,
       accounts: [process.env.DEPLOYER_PRIVATE_KEY!],
     },
   },
