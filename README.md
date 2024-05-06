@@ -1,4 +1,4 @@
-# contract-list
+# Contract List
 
 ### Scroll Launch Core Contracts
 
